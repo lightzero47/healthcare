@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-
+<?xml version="1.1" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".Register"
     android:background="@drawable/bgapps">
 
     <LinearLayout
@@ -136,13 +135,14 @@
                     android:text="ADDRESS"
                     android:textSize="20dp"
                     android:layout_marginTop="15dp"
+
                     android:layout_marginLeft="150dp"
                     android:padding="5dp"
                     android:layout_margin="5dp"
                     />
                 <EditText android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your address"
+                    android:hint="Enter password"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/address"
                     />
@@ -196,7 +196,6 @@
                     android:layout_width="wrap_content"
                     android:text="PASSWORD"
                     android:textSize="20dp"
-
                     android:layout_marginTop="15dp"
                     android:id="@+id/passwordview"
                     android:layout_marginLeft="150dp"
@@ -206,10 +205,8 @@
                 <EditText android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Enter password"
-                    android:inputType="textPassword"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/password2"
-
                     />
             </android.support.v7.widget.CardView>
 
@@ -238,7 +235,7 @@
                     />
                 <EditText android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Enter contact info"
+                    android:hint="Enter password"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/phone1"
                     />

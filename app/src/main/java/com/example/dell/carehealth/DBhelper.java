@@ -1,11 +1,14 @@
 package com.example.dell.carehealth;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.HashMap;
 
@@ -64,10 +67,11 @@ public class DBhelper extends SQLiteOpenHelper {
     public boolean getdata(String email,String password){
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cur=db.rawQuery("SELECT * FROM "+ TABLE_NAME + "WHERE" + TABLE_NAME + "." + COL_EMAIL + " = "+ email + " AND "
-                + TABLE_NAME + "." + COL_PASSWORD + " = "+ password  ,null);
-        Log.i("Info:", String.valueOf(cur));
-        if(cur.getCount()>0)
+
+        Cursor cur=db.rawQuery("SELECT * FROM "+ TABLE_NAME + " WHERE " + TABLE_NAME + "." + COL_EMAIL + " = "+ "email" + " AND "
+                + TABLE_NAME + "." + COL_PASSWORD + " = "+ "password"  ,null);
+        int count = cur.getCount();
+        if(count>0)
         {
             return true;
         }
